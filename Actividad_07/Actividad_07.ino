@@ -83,4 +83,4 @@ void loop() {
       En este código se prueban los timers, en este caso el timer 0 solo se muestra una vez. La tarea
       del timer 1 se va a recargar cada ciertos ms (según se especifique en el código).
       
-      La actividad no la pude realizar dado que se quemó mi ESP32*/
+      La actividad no la pude realizar dado que se quemó mi ESP32 probando el proyecto integrador*/
