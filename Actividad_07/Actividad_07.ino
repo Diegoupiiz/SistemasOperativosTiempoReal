@@ -76,11 +76,15 @@ void setup() {
 
 
 void loop() {
-  // Execution should never get here
-}
+  if (Serial.available()>0){
+  char incoming = Serial.read();
+  if (incoming != '\n'){
+        Serial.println("reinicio de timer");
+        xTimerStart(one_shot_timer, portMAX_DELAY);
+  }
+  }
 
 /*    --------------------------------------------------Comentarios----------------------------------------------------------
       En este código se prueban los timers, en este caso el timer 0 solo se muestra una vez. La tarea
       del timer 1 se va a recargar cada ciertos ms (según se especifique en el código).
-      
-      La actividad no la pude realizar dado que se quemó mi ESP32 probando el proyecto integrador*/
+      */
